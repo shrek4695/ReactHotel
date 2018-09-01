@@ -1,21 +1,50 @@
 import React from 'react';
 
 const fub={
-    background:'red'
+    background:'red',
+    cursor:'pointer'
 };
 const fur={
     visibility:'hidden'
 };
-const fud =()=>{
- 
-};
+
 const display =(props) =>{
-  var fun=(item)=>{
+    
+    var handlechange = (i) => {
+        props.content.types.map((item) => {
+            
+            if(item.id==i) {
+                document.getElementsByClassName("dis")[item.id].style.visibility="visible";
+                
+            }
+            else {
+                document.getElementsByClassName("dis")[item.id].style.visibility="hidden";
+              
+            }
+        })
+    }
+    var setvisibility = (i) => {
+        props.content.types.map((item) => {
+            
+            if(item.id==i) {
+
+                document.getElementsByClassName("abc")[item.id].style.visibility="visible";
+            }
+            else {
+                document.getElementsByClassName("abc")[item.id].style.visibility="hidden";
+                document.getElementsByClassName("dis")[item.id].style.visibility="hidden";
+            }
+        })
+    }
+    
+
+    var looping=(item)=>{
     return item.map((i)=>{
         return (
             <div>
-            <div onClick={fud} style={fub}>{i.itemname}</div>
-            <div style={fur}>{i.itemdescription}</div>
+            <div  style={fub} onClick={()=>setvisibility(i.id)}>{i.itemname}</div>
+            <div style={fur} className="abc" onClick={() => handlechange(i.id)}>{i.itemmodel}</div>
+            <div style={fur} className="dis">{i.itemdescription}</div>
             </div>
         )
     })
@@ -25,7 +54,7 @@ const display =(props) =>{
         <div>
           <div>{props.content.name}</div>
           <div>{props.content.description}</div>
-          <div>{fun(props.content.types)}</div>
+          <div>{looping(props.content.types)}</div>
         </div>
     )
 }

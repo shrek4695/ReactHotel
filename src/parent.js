@@ -13,31 +13,31 @@ class parent extends React.Component{
                     name:'Button',
                     description:'This is a clickable button',
                     types: [
-                        {id:'1',itemname:'Book Now',itemdescription:'<html Code>'},
-                        {id:'2',itemname:'Book On Available',itemdescription:'Available on Selected Dates'},
-                        {id:'3',itemname:'Not Available',itemdescription:'Not Available'},
-                        {id:'4',itemname:'Search',itemdescription:'Search the hotel'}
+                        {id:'0',itemname:'Book Now',itemdescription:'<html Code>',itemmodel:'Book Now' },
+                        {id:'1',itemname:'Book On Available',itemdescription:'<html Code>',itemmodel:'Book On Available'},
+                        {id:'2',itemname:'Not Available',itemdescription:'<html Code>',itemmodel:'Not Available'},
+                        {id:'3',itemname:'Search',itemdescription:'<html Code>',itemmodel:'Search'}
                     ]   
                     },
                 Datepicker: {
                     name:'Datepicker',
                     description:'Picking to and from date from Calender',
                     types: [
-                        {id:'1',itemname:'DatePicker',itemdescription:'Picking From and To Date'}
+                        {id:'0',itemname:'DatePicker',itemdescription:'<html Code>',itemmodel:'DatePicker'}
                     ]
                 },
                 Searchbox:{
                     name:'Searchbox',
                     description:'Enter the Hotel Name',
                     types: [
-                        {id:'1',itemname:'DatePicker',itemdescription:'Hotel Search'}
+                        {id:'0',itemname:'SearchBox',itemdescription:'<html Code>',itemmodel:'SearchBox'}
                     ]
                 },
                 Logo:{
                     name:'Logo',
                     description:'Logo of Hotel',
                     types: [
-                        {id:'1',itemname:'Logo',itemdescription:'Logo of hotel'}
+                        {id:'0',itemname:'Logo',itemdescription:'<html Code>',itemmodel:'Logo'}
                     ]
                 }
             },
